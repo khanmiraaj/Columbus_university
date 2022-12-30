@@ -2,18 +2,32 @@ package com.cu.dto;
 
 public class StudentDto {
 
+	private String universityRollNo;
+
 	private String firstName;
 
 	private String lastName;
 
 	private String course;
 
+	private String courseName;
+
 	private String dateOfBirth;
 
 	private String semester;
 
+	private String password;
+
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public String getUniversityRollNo() {
+		return universityRollNo;
+	}
+
+	public void setUniversityRollNo(String universityRollNo) {
+		this.universityRollNo = universityRollNo;
 	}
 
 	public void setFirstName(String firstName) {
@@ -52,13 +66,27 @@ public class StudentDto {
 		this.semester = semester;
 	}
 
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
-		return "StudentDto [firstName=" + firstName + ", lastName=" + lastName + ", course=" + course + ", dateOfBirth="
-				+ dateOfBirth + ", semester=" + semester + "]";
+		return "StudentDto [firstName=" + firstName + ", lastName=" + lastName + ", course=" + course + ", courseName="
+				+ courseName + ", dateOfBirth=" + dateOfBirth + ", semester=" + semester + ", password=" + password
+				+ "]";
 	}
-	
-	
-	
 
 }
