@@ -12,8 +12,8 @@ import jakarta.persistence.Table;
 public class Student {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected int id;
+	@Column(name = "university_roll_no")
+	protected String universityRollNo;
 
 	@Column(name = "first_nm")
 	protected String firstName;
@@ -30,12 +30,18 @@ public class Student {
 	@Column(name = "course")
 	protected String course;
 
-	public int getId() {
-		return id;
+	@Column(name = "course_nm")
+	protected String courseName;
+
+	@Column(name = "password")
+	protected String password;
+
+	public String getUniversityRollNo() {
+		return universityRollNo;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUniversityRollNo(String universityRollNo) {
+		this.universityRollNo = universityRollNo;
 	}
 
 	public String getFirstName() {
@@ -78,10 +84,27 @@ public class Student {
 		this.course = course;
 	}
 
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", dateOfBirth="
-				+ dateOfBirth + ", semester=" + semester + ", course=" + course + "]";
+		return "Student [universityRollNo=" + universityRollNo + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", dateOfBirth=" + dateOfBirth + ", semester=" + semester + ", course=" + course + ", courseName="
+				+ courseName + ", password=" + password + "]";
 	}
 
 }

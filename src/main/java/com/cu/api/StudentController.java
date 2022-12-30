@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cu.dto.StudentDto;
 import com.cu.dto.StudentResponseDto;
+import com.cu.dto.StudentSignInDto;
 import com.cu.service.StudentManagementServcie;
 
 @RestController
@@ -25,6 +26,13 @@ public class StudentController {
 	public ResponseEntity<?> registerStudent(@RequestBody StudentDto studentDto) {
 
 		StudentResponseDto studentResponseDto = studentManagementServcie.registerStudent(studentDto);
+		return new ResponseEntity<>(studentResponseDto, HttpStatus.OK);
+	}
+	@PostMapping(value = "/validate-student", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> validateStudent(@RequestBody StudentSignInDto studentSignInDto) {
+
+		StudentResponseDto studentResponseDto = studentManagementServcie.validateStudent(studentSignInDto);
+
 		return new ResponseEntity<>(studentResponseDto, HttpStatus.OK);
 	}
 
