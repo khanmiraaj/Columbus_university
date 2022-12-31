@@ -32,7 +32,7 @@ public class StudentManagementServcie {
 
 		if (optionalStudent.isPresent()) {
 			responseDto.setStatusCode("F0000");
-			responseDto.setDescription("You Are  ALready Registered With Us");
+			responseDto.setDescription("You Are  Already Registered With Us");
 			return responseDto;
 
 		}
