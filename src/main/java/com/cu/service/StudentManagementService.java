@@ -14,11 +14,6 @@ import com.cu.dto.StudentResponseDto;
 import com.cu.dto.StudentSignInDto;
 import com.cu.entity.Student;
 import com.cu.repository.StudentRepository;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 
 @Service
 public class StudentManagementService {
