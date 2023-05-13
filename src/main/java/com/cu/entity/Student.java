@@ -34,6 +34,12 @@ public class Student {
 	@Column(name = "password")
 	protected String password;
 
+	@Column(name = "father_name")
+	protected String fatherName;
+
+	@Column(name = "mother_name")
+	protected String motherName;
+
 	public String getUniversityRollNo() {
 		return universityRollNo;
 	}
@@ -96,6 +102,22 @@ public class Student {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getFatherName() {
+		return fatherName;
+	}
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+
+	public String getMotherName() {
+		return motherName;
+	}
+
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
 	}
 
 	@Override

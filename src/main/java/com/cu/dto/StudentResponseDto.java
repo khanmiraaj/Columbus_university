@@ -8,6 +8,10 @@ public class StudentResponseDto {
 
 	private StudentDto studentDto;
 
+	private FeeDetailsDto feeDetailsDto;
+	
+	private StudentResultDto studentResultDto;
+
 	public String getStatusCode() {
 		return statusCode;
 	}
@@ -30,6 +34,24 @@ public class StudentResponseDto {
 
 	public void setStudentDto(StudentDto studentDto) {
 		this.studentDto = studentDto;
+	}
+
+	public FeeDetailsDto getFeeDetailsDto() {
+		return feeDetailsDto;
+	}
+
+	public void setFeeDetailsDto(FeeDetailsDto feeDetailsDto) {
+		this.feeDetailsDto = feeDetailsDto;
+	}
+	
+	
+
+	public StudentResultDto getStudentResultDto() {
+		return studentResultDto;
+	}
+
+	public void setStudentResultDto(StudentResultDto studentResultDto) {
+		this.studentResultDto = studentResultDto;
 	}
 
 	@Override

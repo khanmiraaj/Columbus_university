@@ -18,6 +18,8 @@ public class StudentDto {
 
 	private String password;
 
+	private String emailAddress;
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -80,6 +82,14 @@ public class StudentDto {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 	@Override
